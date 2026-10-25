@@ -8,6 +8,15 @@
     * { box-sizing:border-box; }
     html,body { margin:0;width:100%;height:100%;background:#050d14;color:#edf7ff;font-family:system-ui,sans-serif; }
     body { display:grid;place-items:center;overflow:hidden;background:radial-gradient(ellipse at 50% 85%,#173449 0,transparent 50%),linear-gradient(#050d14,#0c1b29); }
+    .live-space {position:fixed;inset:0;overflow:hidden;pointer-events:none;}
+    .space-glow {position:absolute;inset:-25%;background:radial-gradient(ellipse at 20% 30%,#1676a143,transparent 45%),radial-gradient(ellipse at 80% 70%,#315e8c55,transparent 40%);animation:space-breathe 32s ease-in-out infinite alternate;}
+    .stars {position:absolute;inset:-100px;background-image:radial-gradient(circle at 20% 22%,#e5f6ff 0 1px,transparent 1.8px),radial-gradient(circle at 75% 34%,#8ce0ff 0 1px,transparent 1.8px),radial-gradient(circle at 32% 72%,#ffffffa6 0 .7px,transparent 1.5px),radial-gradient(circle at 58% 18%,#ffffff73 0 .7px,transparent 1.4px);background-size:223px 251px,317px 289px,163px 193px,397px 347px;animation:stellar-drift 80s linear infinite alternate;}
+    .stars.far {opacity:.35;background-size:137px 149px,193px 211px,283px 173px,353px 257px;animation-duration:130s;animation-direction:alternate-reverse;}
+    .orbit {position:absolute;width:74vw;height:74vw;left:-36vw;top:10vh;border:1px solid #8ce0ff18;border-radius:50%;box-shadow:0 0 90px #8ce0ff08;transform:rotate(-25deg) scaleY(.6);}
+    .orbit:after {content:'';position:absolute;inset:15%;border:1px solid #8ce0ff14;border-radius:50%;}
+    @keyframes stellar-drift {from{transform:translate3d(-35px,20px,0)}to{transform:translate3d(65px,-65px,0)}}
+    @keyframes space-breathe {from{transform:translate3d(-3%,0,0) scale(1);opacity:.65}to{transform:translate3d(3%,-3%,0) scale(1.08);opacity:1}}
+    @media(prefers-reduced-motion:reduce){.stars,.space-glow{animation:none;}}
     .phone { width:390px;height:800px;position:relative;padding:12px;border-radius:54px;background:linear-gradient(125deg,#75828d 0,#26333e 2%,#080d12 5%,#293844 94%,#87939c 98%,#27313a 100%);box-shadow:0 40px 90px #000a,inset 0 0 0 2px #7a889466;transform:scale(var(--phone-scale,1)); }
     .screen { height:100%;border-radius:43px;overflow:hidden;background:#040b12;position:relative;border:2px solid #000; }
     .status {height:37px;display:flex;align-items:center;justify-content:space-between;padding:0 26px;font-size:12px;font-weight:650;background:#040b12;}
@@ -23,6 +32,7 @@
   </style>
 </head>
 <body>
+  <div class="live-space" aria-hidden="true"><div class="space-glow"></div><div class="stars far"></div><div class="stars"></div><div class="orbit"></div></div>
   <div class="phone" aria-label="Interactive Scotty phone preview">
     <span class="power" aria-hidden="true"></span><span class="volume" aria-hidden="true"></span><span class="volume second" aria-hidden="true"></span>
     <div class="screen">
