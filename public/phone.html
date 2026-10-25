@@ -16,8 +16,12 @@
     .orbit:after {content:'';position:absolute;inset:15%;border:1px solid #8ce0ff14;border-radius:50%;}
     @keyframes stellar-drift {from{transform:translate3d(-35px,20px,0)}to{transform:translate3d(65px,-65px,0)}}
     @keyframes space-breathe {from{transform:translate3d(-3%,0,0) scale(1);opacity:.65}to{transform:translate3d(3%,-3%,0) scale(1.08);opacity:1}}
-    @media(prefers-reduced-motion:reduce){.stars,.space-glow{animation:none;}}
-    .phone { width:390px;height:800px;position:relative;padding:12px;border-radius:54px;background:linear-gradient(125deg,#75828d 0,#26333e 2%,#080d12 5%,#293844 94%,#87939c 98%,#27313a 100%);box-shadow:0 40px 90px #000a,inset 0 0 0 2px #7a889466;transform:scale(var(--phone-scale,1)); }
+    .phone-stage {position:fixed;left:50%;top:calc(var(--viewport-height,100dvh)/2);width:390px;height:800px;transform:translate(-50%,-50%) scale(var(--phone-scale,1));transform-origin:center;}
+    .phone-stage::after {content:'';position:absolute;left:8%;right:8%;bottom:-30px;height:22px;border-radius:50%;background:#0007;filter:blur(14px);animation:float-shadow 7s ease-in-out infinite;pointer-events:none;}
+    @keyframes phone-float {0%,100%{transform:translateY(-6px)}50%{transform:translateY(6px)}}
+    @keyframes float-shadow {0%,100%{transform:scale(.92);opacity:.35}50%{transform:scale(1.04);opacity:.55}}
+    @media(prefers-reduced-motion:reduce){.stars,.space-glow,.phone,.phone-stage::after{animation:none!important;}}
+    .phone { width:390px;height:800px;position:relative;padding:12px;border-radius:54px;background:linear-gradient(125deg,#75828d 0,#26333e 2%,#080d12 5%,#293844 94%,#87939c 98%,#27313a 100%);box-shadow:0 40px 90px #000a,inset 0 0 0 2px #7a889466;animation:phone-float 7s ease-in-out infinite; }
     .screen { height:100%;border-radius:43px;overflow:hidden;background:#040b12;position:relative;border:2px solid #000; }
     .status {height:37px;display:flex;align-items:center;justify-content:space-between;padding:0 26px;font-size:12px;font-weight:650;background:#040b12;}
     .island {position:absolute;top:10px;left:50%;transform:translateX(-50%);width:112px;height:25px;border-radius:30px;background:#000;z-index:2;box-shadow:inset 0 0 0 1px #ffffff0c;}
@@ -33,7 +37,7 @@
 </head>
 <body>
   <div class="live-space" aria-hidden="true"><div class="space-glow"></div><div class="stars far"></div><div class="stars"></div><div class="orbit"></div></div>
-  <div class="phone" aria-label="Interactive Scotty phone preview">
+  <div class="phone-stage"><div class="phone" aria-label="Interactive Scotty phone preview">
     <span class="power" aria-hidden="true"></span><span class="volume" aria-hidden="true"></span><span class="volume second" aria-hidden="true"></span>
     <div class="screen">
       <div class="status" aria-hidden="true"><span>9:41</span><span>5G <span class="battery"></span></span></div>
@@ -41,11 +45,17 @@
       <iframe src="./" title="Working Scotty app" allow="clipboard-write; web-share"></iframe>
       <div class="home" aria-hidden="true"></div>
     </div>
-  </div>
+  </div></div>
   <p class="hint">Live interactive app · Scroll, choose a route, and book with demo credits</p>
   <script>
-    function fitPhone() { document.documentElement.style.setProperty('--phone-scale',Math.min(1,(innerWidth-28)/390,(innerHeight-40)/800)); }
+    function fitPhone() {
+      const height=visualViewport ? visualViewport.height : innerHeight;
+      const width=visualViewport ? visualViewport.width : innerWidth;
+      document.documentElement.style.setProperty('--viewport-height',height+'px');
+      document.documentElement.style.setProperty('--phone-scale',Math.max(.1,Math.min(1,(width-48)/390,(height-128)/800)));
+    }
     fitPhone(); addEventListener('resize',fitPhone);
+    if(visualViewport)visualViewport.addEventListener('resize',fitPhone);
   </script>
 </body>
 </html>
