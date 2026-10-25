@@ -1,0 +1,19 @@
+Proteron Ships — 3D model attribution
+
+Author: Viktor Hahn (publishes as Unnamed)
+Source: https://opengameart.org/content/proteron-ships
+License: Creative Commons Attribution 4.0 International
+License URL: https://creativecommons.org/licenses/by/4.0/
+Original downloadable package: https://opengameart.org/sites/default/files/gltf.zip
+Retrieved: 2026-10-25
+
+Original GLB names retained, with embedded authored textures:
+- dalton.glb: used for the Shuttle class
+- hippocrates.glb: used for the Runabout class
+- archimedes.glb: used for the Starship class
+
+Scotty changes: display normalization, selected-class scale, route heading/banking, environment/key/rim lighting and cyan modulation of authored emissive maps. Geometry and original model files are not overwritten. These are existing licensed artist-made models, not models generated for this project. They are not exact Star Trek canon vessels.
+
+Earlier candidate models are not used in the current app: scotty-shuttle.glb from Grab3D, shuttle.glb and starship.glb from Kenney Space Kit. Their original licenses are retained separately. The prior PNG ship remains an archived asset and is no longer used for the map vessel or ride options.
+
+Current additions: Watson and Pythagoras model masters and authored previews are retained from the same original package. Watson currently represents the accessible commuter transport; Pythagoras remains archived after the XL service adopted rubaun's Star Destroyer mesh. Dalton and Hippocrates remain private ship options. Archimedes is preserved but superseded as the standard bus. All Proteron models retain the same Viktor Hahn CC BY 4.0 credit. Mobile derivatives reduce embedded texture dimensions, leaving source geometry and desktop masters intact.

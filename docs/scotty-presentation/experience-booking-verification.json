@@ -1,0 +1,20 @@
+{
+  "errors": [],
+  "planetPositions": {
+    "earth": {
+      "x": 214,
+      "y": 378
+    },
+    "destination": {
+      "x": 141,
+      "y": 192
+    },
+    "sheetTop": 472.640625
+  },
+  "ride": "riding",
+  "compact": {
+    "overflow": false,
+    "sheetTop": 132,
+    "progressBottom": 118
+  }
+}

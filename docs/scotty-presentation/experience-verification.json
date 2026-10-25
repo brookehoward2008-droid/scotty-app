@@ -1,0 +1,60 @@
+{
+  "errors": [],
+  "controlsClosed": false,
+  "controlsOpen": true,
+  "pauseWorks": true,
+  "earth": {
+    "traffic": 0,
+    "tiles": 8,
+    "labels": [
+      {
+        "name": "Space Needle",
+        "stop": "pickup"
+      },
+      {
+        "name": "Pike Place Market",
+        "stop": "destination"
+      },
+      {
+        "name": "Seattle Ferry Terminal",
+        "stop": ""
+      },
+      {
+        "name": "King Street Station",
+        "stop": ""
+      },
+      {
+        "name": "Gas Works Park",
+        "stop": ""
+      },
+      {
+        "name": "Elliott Bay Launchpad",
+        "stop": ""
+      },
+      {
+        "name": "Lake Union Spaceport",
+        "stop": ""
+      },
+      {
+        "name": "SoDo Launch Terminal",
+        "stop": ""
+      }
+    ]
+  },
+  "depths": [
+    -120,
+    -255,
+    -390,
+    -525,
+    -120,
+    -255,
+    -390,
+    -525,
+    -120,
+    -255,
+    -390,
+    -525
+  ],
+  "capacity": 12,
+  "overflow": false
+}

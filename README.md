@@ -38,3 +38,7 @@ The phone screen embeds the working app, with search, demo booking, trips, cance
 The booking flow, cancellation/refund, route selection and mobile layout have been tested in Chromium, including inside the phone frame. Native device testing remains outstanding. The restored space scene uses the navy and gold treatment from Brooke's phone mockup. The demo stores bookings separately in each browser; it is not a shared live reservation service.
 
 Existing fonts retain their licenses in `assets/fonts/`. Brand specifications and wireframes are included for project context.
+
+## SCOTTY screen-share presentation
+
+The separate [classroom web presentation](docs/scotty-presentation/README.md) includes a compact overview, interactive app demo, recorded walkthrough, and full-screen controls. Source and assets are under `docs/scotty-presentation/`; the existing Expo app is preserved.

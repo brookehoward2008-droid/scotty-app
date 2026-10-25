@@ -1,0 +1,52 @@
+{
+  "errors": [],
+  "sizes": [
+    {
+      "width": 1280,
+      "height": 720,
+      "horizontalOverflow": false,
+      "verticalOverflow": false,
+      "phoneHeight": 584,
+      "headline": "48px",
+      "phoneAboveToolbar": true,
+      "storyBottom": 591.4375
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "horizontalOverflow": false,
+      "verticalOverflow": false,
+      "phoneHeight": 592,
+      "headline": "58px",
+      "phoneAboveToolbar": true,
+      "storyBottom": 643.359375
+    },
+    {
+      "width": 1024,
+      "height": 600,
+      "horizontalOverflow": false,
+      "verticalOverflow": false,
+      "phoneHeight": 464,
+      "headline": "42px",
+      "phoneAboveToolbar": true,
+      "storyBottom": 493.21875
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "horizontalOverflow": false,
+      "verticalOverflow": true,
+      "phoneHeight": 580,
+      "headline": "44px",
+      "phoneAboveToolbar": false,
+      "storyBottom": 622.359375
+    }
+  ],
+  "demo": "true",
+  "video": {
+    "open": true,
+    "duration": 71.36
+  },
+  "pausedOnClose": true,
+  "fullscreen": true
+}

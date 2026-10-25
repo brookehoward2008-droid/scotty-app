@@ -1,0 +1,24 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SCOTTY — Phone Presentation</title><link rel="stylesheet" href="ScottyPresentation.css"><style>body{margin:0}</style><link rel="stylesheet" href="scotty-typography.css"><link rel="stylesheet" href="screen-share.css"></head><body><main class="presentation-root">
+      <div class="presentation-nebula" aria-hidden="true"></div>
+      <section class="presentation-story" aria-labelledby="presentation-heading">
+        <p class="presentation-eyebrow">SCOTTY / YOUR DAILY CONNECTION</p>
+        <h1 id="presentation-heading">Beam me up,<br /><span>Scotty.</span></h1>
+        <p class="presentation-intro">Your ship. Your rocket bus. Your daily ride.</p>
+        <div class="presentation-route" aria-label="Example route: Earth Spacedock to Vulcan ShiKahr">
+          <div><span class="route-dot"></span><p><strong>Earth</strong><small>Spacedock</small></p></div>
+          <span class="presentation-route-line" aria-hidden="true"></span>
+          <div><span class="route-dot route-dot-gold"></span><p><strong>Vulcan</strong><small>ShiKahr</small></p></div>
+        </div>
+        <div class="presentation-services">
+          <article><span class="presentation-service-label">01 / PRIVATE</span><h2>Book a ship.</h2><p>Your pilot. Your departure.<br />One fare for your ship.</p></article>
+          <article><span class="presentation-service-label">02 / SHARED</span><h2>Ride a rocket bus.</h2><p>Scheduled connections.<br />Reserve a seat for your commute.</p></article>
+        </div>
+        <a class="presentation-open" href="./index.html?skip=1" target="_blank" rel="noreferrer">Open SCOTTY full screen <span aria-hidden="true">↗</span></a>
+        <p class="presentation-hint">Try the phone: plan a route, compare pilots, read reviews and book a ride.</p>
+        <footer class="presentation-footnote">UI/UX class assignment · Fictional transport, schedules and reviews.</footer>
+      </section>
+      <section class="presentation-device-stage" aria-label="Interactive SCOTTY mobile app">
+        <div class="presentation-device"><iframe title="SCOTTY commuter app — interactive phone preview" src="./index.html?skip=1" loading="eager" allow="fullscreen"></iframe></div>
+        <p class="presentation-device-caption"><span aria-hidden="true"></span> LIVE INTERACTIVE APP</p>
+      </section>
+    </main><script type="module">import {mountPresentation} from "./screen-share.js";mountPresentation();</script></body></html>
