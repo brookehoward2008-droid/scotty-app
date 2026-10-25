@@ -1,0 +1,10 @@
+{
+  "entry": "main.typ",
+  "metadata": {
+    "author": "Scotty Design System",
+    "subtitle": "Brand Guidelines & Mobile UI Component Specifications",
+    "title": "Scotty Brand & Interface Standards"
+  },
+  "mode": "report",
+  "theme": "report-theme.typ"
+}

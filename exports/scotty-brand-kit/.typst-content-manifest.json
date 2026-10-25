@@ -1,0 +1,11 @@
+{
+  "task_kind": "new-document",
+  "output": "pdf",
+  "signals": [],
+  "hard_constraints": ["professional brand standards and UI component reference", "export PDF"],
+  "content_features": {
+    "code_blocks": 0,
+    "defined_terms": 15,
+    "portrait_images": 0
+  }
+}
