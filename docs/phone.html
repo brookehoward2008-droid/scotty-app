@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>scotty — Interactive phone</title>
+  <style>
+    * { box-sizing:border-box; }
+    html,body { margin:0;width:100%;height:100%;background:#050d14;color:#edf7ff;font-family:system-ui,sans-serif; }
+    body { display:grid;place-items:center;overflow:hidden;background:radial-gradient(ellipse at 50% 85%,#173449 0,transparent 50%),linear-gradient(#050d14,#0c1b29); }
+    .phone { width:390px;height:800px;position:relative;padding:12px;border-radius:54px;background:linear-gradient(125deg,#75828d 0,#26333e 2%,#080d12 5%,#293844 94%,#87939c 98%,#27313a 100%);box-shadow:0 40px 90px #000a,inset 0 0 0 2px #7a889466;transform:scale(var(--phone-scale,1)); }
+    .screen { height:100%;border-radius:43px;overflow:hidden;background:#040b12;position:relative;border:2px solid #000; }
+    .status {height:37px;display:flex;align-items:center;justify-content:space-between;padding:0 26px;font-size:12px;font-weight:650;background:#040b12;}
+    .island {position:absolute;top:10px;left:50%;transform:translateX(-50%);width:112px;height:25px;border-radius:30px;background:#000;z-index:2;box-shadow:inset 0 0 0 1px #ffffff0c;}
+    .island:after {content:'';position:absolute;right:12px;top:8px;width:8px;height:8px;border-radius:50%;background:radial-gradient(circle,#233c5a,#080b10);}
+    iframe {display:block;width:100%;height:calc(100% - 37px);border:0;background:#040b12;}
+    .power,.volume {position:absolute;background:linear-gradient(90deg,#667682,#1a232d);width:4px;border-radius:3px;}
+    .power {right:-3px;top:178px;height:75px;}.volume {left:-3px;top:160px;height:48px;}.volume.second {top:220px;}
+    .battery {display:inline-block;width:19px;height:9px;border:1px solid #bccad5;border-radius:3px;padding:1px;vertical-align:middle;margin-left:5px;}.battery:after {content:'';display:block;width:90%;height:100%;background:#edf7ff;border-radius:1px;}
+    .home {position:absolute;bottom:5px;left:50%;transform:translateX(-50%);width:105px;height:4px;background:#edf7ff99;border-radius:3px;pointer-events:none;}
+    .hint {position:fixed;bottom:8px;font-size:12px;color:#b8cadc;text-align:center;margin:0 12px;}
+    @media(max-width:450px){.hint{display:none;}}
+  </style>
+</head>
+<body>
+  <div class="phone" aria-label="Interactive Scotty phone preview">
+    <span class="power" aria-hidden="true"></span><span class="volume" aria-hidden="true"></span><span class="volume second" aria-hidden="true"></span>
+    <div class="screen">
+      <div class="status" aria-hidden="true"><span>9:41</span><span>5G <span class="battery"></span></span></div>
+      <div class="island" aria-hidden="true"></div>
+      <iframe src="./" title="Working Scotty app" allow="clipboard-write; web-share"></iframe>
+      <div class="home" aria-hidden="true"></div>
+    </div>
+  </div>
+  <p class="hint">Live interactive app · Scroll, choose a route, and book with demo credits</p>
+  <script>
+    function fitPhone() { document.documentElement.style.setProperty('--phone-scale',Math.min(1,(innerWidth-28)/390,(innerHeight-40)/800)); }
+    fitPhone(); addEventListener('resize',fitPhone);
+  </script>
+</body>
+</html>

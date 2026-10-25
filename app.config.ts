@@ -143,6 +143,7 @@ const config: ExpoConfig = {
     ],
   ],
   experiments: {
+    baseUrl: process.env.EXPO_PUBLIC_SCOTTY_BASE_PATH || undefined,
     typedRoutes: true,
     reactCompiler: true,
   },

@@ -8,6 +8,8 @@ node_modules/
 share-dist/
 web-dist/
 planner-*/
+phone-dist/
+phone-pages/
 .pnpm-store/
 *.manus-starter-[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]
 

@@ -29,8 +29,12 @@ pnpm test
 
 [Brooke's clean26 portfolio](https://brookehoward2008-droid.github.io/clean26/)
 
+[Open the interactive phone](https://brookehoward2008-droid.github.io/scotty-app/phone.html)
+
+The phone screen embeds the working app, with search, demo booking, trips, cancellation and refunds. Its hardware frame and space-scene styling are adapted from Brooke's supplied HTML mockup; the existing logo remains intact. Open `/phone.html` on the local web preview to use the phone presentation.
+
 ## Current state
 
-The booking flow, cancellation/refund, route selection and mobile layout have been tested in Chromium. Native device testing remains outstanding. Restoration of the full blue/cyan space-scene styling requested by Brooke is still pending; the current source retains the earlier palette. This repository is source publication, not proof of a publicly hosted app.
+The booking flow, cancellation/refund, route selection and mobile layout have been tested in Chromium, including inside the phone frame. Native device testing remains outstanding. The restored space scene uses the navy and gold treatment from Brooke's phone mockup. The demo stores bookings separately in each browser; it is not a shared live reservation service.
 
 Existing fonts retain their licenses in `assets/fonts/`. Brand specifications and wireframes are included for project context.

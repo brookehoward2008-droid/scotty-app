@@ -13,7 +13,7 @@ export function ShareApp() {
         throw new Error(
           "Open the published Scotty website to share its web link.",
         );
-      const url = window.location.origin + "/";
+      const url = window.location.origin + (process.env.EXPO_PUBLIC_SCOTTY_BASE_PATH || '') + "/phone.html";
       if (["localhost", "127.0.0.1", "::1"].includes(window.location.hostname))
         throw new Error(
           "This is the local preview. Publish Scotty before sending its link to someone else.",

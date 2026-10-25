@@ -11,15 +11,15 @@ import {
 import { Ionicons } from "@expo/vector-icons";
 import Svg, { Path, Circle } from "react-native-svg";
 export const C = {
-  bg: "#0d1010",
-  panel: "#171b1a",
-  elevated: "#1e2321",
-  border: "#2a302d",
-  mint: "#c4f1c8",
+  bg: "#040b12",
+  panel: "rgba(11,21,29,0.82)",
+  elevated: "#122536",
+  border: "#294353",
+  mint: "#f0c57d",
   green: "#88ba95",
-  text: "#f2f4ee",
-  muted: "#AFBBB3",
-  faint: "#91A198",
+  text: "#edf7ff",
+  muted: "#b8cadc",
+  faint: "#9bb5ca",
   amber: "#e7bb7d",
 };
 export const F = {
@@ -41,7 +41,7 @@ export function Icon({
 }
 export function Mark({
   size = 34,
-  color = C.mint,
+  color = "#c4f1c8",
 }: {
   size?: number;
   color?: string;

@@ -2,6 +2,7 @@ import { useRouter, useIsFocused, type Href } from "expo-router";
 import { useMobileStateContext } from "./mobile-state";
 import { useShipClock } from "@/hooks/use-ship-clock";
 import { DEMO_MODE } from "@/lib/scotty-demo";
+import { SpaceScene } from './space-scene';
 import { trpc } from "@/lib/trpc";
 import { shipTimestamp, shipTime } from "@/lib/scotty-trip";
 import React, { useRef } from "react";
@@ -181,6 +182,7 @@ export default function ScottyApp({ page }: { page: Page }) {
   };
   return (
     <View style={[s.root, { paddingTop: desktop ? 0 : insets.top }]}>
+      <SpaceScene />
       {desktop && (
         <View aria-hidden={!!dialog} accessibilityElementsHidden={!!dialog} style={s.sidebar}>
           <View style={s.logo}>
