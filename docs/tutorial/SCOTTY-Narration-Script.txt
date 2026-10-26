@@ -1,0 +1,17 @@
+This is Scotty, a fictional space-travel booking app. Let’s plan a trip, choose a ride, and follow the journey.
+
+Start with Find a ride. The map stays visible while you set your pickup and destination. For this walkthrough, we’re traveling from Earth to Vulcan. Check the travel date and departure time. These times are shown in U T C. Choose a service, then select Choose spacecraft.
+
+Here you can compare a private ship with a shared rocket bus. Private fares cover the ship. Bus fares are shown per seat. Use the Rocket bus filter to narrow the list, then compare the fare, available seats, and pilot.
+
+Before choosing, open Read reviews. You can see the pilot’s rating and comments from previous passengers. These reviews are fictional examples. Select Travel with Jean-Luc Picard to choose this ride.
+
+You can also inspect the spacecraft in three dimensions. Drag to turn the model and see its shape from different angles. Close the inspection to return to your booking.
+
+Next, review the journey. Check the destination, pilot, departure window, and fare. When the details look right, select Proceed to checkout.
+
+At checkout, choose Scotty travel credits and review the total. Tick the confirmation box, then select Confirm booking. This is a demonstration. No real payment is taken.
+
+When your vessel is ready, select Begin journey. Watch the selected craft move along the route. Travel is accelerated for the demo, so you can see departure and arrival without waiting for a real trip.
+
+After arrival, open My trips to see the completed journey. You can plan another voyage, switch to the Earth street map, or explore the Solar System. That’s the full Scotty booking walkthrough.
